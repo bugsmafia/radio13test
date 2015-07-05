@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.radio13test.Player"
+        versionCode="10" 
+        version   = "0.0.1"> 
+    <name>Радио 13 T</name>
+
+    <description>Интернет радиостанция</description>
+
+    <author href="https://vk.com/bugsmafia" email="bugsmafia@gmail.com">Разработчик: Сергей Осипов</author>
+
+	<preference name="android-installLocation" value="auto" />
+	<gap:platform name="android" />
+	<preference name="permissions" value="none"/>
+	
+	<icon src="icon/144-xxhdpi.png" />
+    <icon src="icon/36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="icon/48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="icon/72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="icon/96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+	<icon src="icon/144-xxhdpi.png"  gap:platform="android"    gap:qualifier="xxhdpi" />
+	
+	<gap:splash src="screen/hdpi-portrait.png" />
+    <gap:splash src="screen/ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="screen/mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="screen/hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="screen/xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+	<gap:splash src="screen/xxhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xxhdpi" />
+	
+	<gap:plugin name="uk.co.whiteoctober.cordova.appversion"/>
+	<gap:plugin name="com.footprint.cordova.plugin.local-notification"/>
+
+</widget>
