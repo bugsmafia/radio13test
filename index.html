@@ -21,78 +21,215 @@
 
     <!-- --------------- App init --------------- -->
 
-    <title>Onsen UI Split View</title>
+    <title>Onsen UI Tab Bar</title>
 
     <script>
         angular.module('app', ['onsen']);
+
+        angular.module('app').controller('AppController', function ($scope) {
+            $scope.doSomething = function () {
+                ons.notification.alert({ message: 'tapped' });
+            };
+        });
     </script>
+
+    <style>
+        .tab {
+            line-height: 1;
+        }
+
+        .tab-icon {
+            font-size: 24px;
+            padding: 0;
+            margin: 0;
+            vertical-align: top;
+            line-height: 28px;
+        }
+
+        .tab-label {
+            line-height: 11px;
+            vertical-align: top;
+            font-size: 11px;
+        }
+
+        .profile-wrapper {
+            padding: 16px 10px 0 10px;
+        }
+
+        .profile-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            background-color: #ccc;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            padding: 4px 0 2px 0;
+        }
+
+        .profile-email {
+            font-size: 15px;
+            opacity: 0.4;
+        }
+
+        .switch--list-item {
+            margin-right: 0px;
+        }
+
+        .settings-header {
+            font-weight: 500;
+            font-size: 14px;
+            opacity: 0.4;
+            padding: 10px 0 0px 10px;
+            margin-bottom: -4px;
+        }
+
+        .settings-list {
+            margin-top: 10px;
+        }
+
+        .item {
+            padding: 10px;
+            line-height: 1;
+        }
+
+        .item-thum {
+            background-color: #ccc;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+        }
+
+        .item-title {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .item-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.3;
+            margin: 4px 0 0 0;
+            padding: 0 30px 0 0;
+        }
+
+        .item-label {
+            font-size: 12px;
+            color: #999;
+            float: right;
+        }
+    </style>
 
 </head>
 
-<body>
+<body ng-controller="AppController">
     <!-- Cordova reference -->
     <script src="cordova.js"></script>
     <script src="scripts/index.js"></script>
     <!-- -->
 
-    <ons-split-view var="splitView"
-                    secondary-page="secondary.html"
-                    main-page="page1.html"
-                    main-page-width="70%"
-                    collapse="portrait">
-    </ons-split-view>
-
-    <ons-template id="page1.html">
-        <ons-page class="center">
-            <ons-toolbar>
-                <div class="center">Page 1</div>
-            </ons-toolbar>
-
-            <div class="content-padded" style="font-size: 13px; text-align: center; color: #999;">
-                <p>Rotate the device to landscape/portrait see the views split/collapse.</p>
-                <p>Or resize the window so that the width is larger than the height (landscape)/smaller than the height (portrait).</p>
+    <ons-tabbar>
+        <ons-tab active="true" page="home.html">
+            <div class="tab">
+                <ons-icon icon="ion-home" class="tab-icon"></ons-icon>
+                <div class="tab-label">Timeline</div>
             </div>
+        </ons-tab>
 
-            <ons-bottom-toolbar>
-            </ons-bottom-toolbar>
-        </ons-page>
+        <ons-tab page="settings.html">
+            <div class="tab">
+                <ons-icon icon="ion-gear-a" class="tab-icon"></ons-icon>
+                <div class="tab-label">Settings</div>
+            </div>
+        </ons-tab>
+    </ons-tabbar>
+
+    <ons-template id="home.html">
+        <ons-navigator>
+            <ons-page>
+                <ons-toolbar>
+                    <div class="left"><ons-toolbar-button ng-click="doSomething()"><ons-icon icon="ion-compose"></ons-icon></ons-toolbar-button></div>
+                    <div class="center">Home</div>
+                    <div class="right"></div>
+                </ons-toolbar>
+
+                <ons-list style="margin: -1px 0">
+                    <ons-list-item modifier="chevron" class="item" ng-repeat="i in [1,2,3,4,5]" ng-click="doSomething()">
+                        <ons-row>
+                            <ons-col width="60px">
+                                <div class="item-thum"></div>
+                            </ons-col>
+                            <ons-col>
+                                <header>
+                                    <span class="item-title">Rorem Ipsum</span>
+                                    <span class="item-label">5h</span>
+                                </header>
+                                <p class="item-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </ons-col>
+                        </ons-row>
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-navigator>
     </ons-template>
 
-    <ons-template id="page2.html">
+    <ons-template id="settings.html">
         <ons-page>
             <ons-toolbar>
-                <div class="center">Page 2</div>
+                <div class="center">Settings</div>
             </ons-toolbar>
 
-            <div class="content-padded" style="font-size: 13px; text-align: center; color: #999;">
-                <p>Rotate the device to landscape/portrait see the views split/collapse.</p>
-                <p>Or resize the window so that the width is larger than the height (landscape)/smaller than the height (portrait).</p>
-            </div>
+            <ons-row class="profile-wrapper">
+                <ons-col width="60px" class="profile-image-wrapper">
+                    <div class="profile-image"></div>
+                </ons-col>
 
-            <ons-bottom-toolbar>
-            </ons-bottom-toolbar>
-        </ons-page>
-    </ons-template>
+                <ons-col>
+                    <div class="profile-name">Foobar</div>
+                    <div class="profile-email">foobar@example.com</div>
+                </ons-col>
 
-    <ons-template id="secondary.html">
-        <ons-page style="border-right: 1px solid #ddd;">
+            </ons-row>
 
-            <ons-list>
+            <div class="settings-header">Share</div>
 
-                <ons-list-item modifier="chevron"
-                               ng-click="splitView.toggle();
-            splitView.setMainPage('page1.html');">
-                    <i class="fa fa-home fa-lg" style="color: #666"></i>
-                    &nbsp; Page 1
+            <ons-list modifier="inset" class="settings-list">
+                <ons-list-item>
+                    Twitter
+                    <ons-switch modifier="list-item"></ons-switch>
                 </ons-list-item>
 
-                <ons-list-item modifier="chevron"
-                               ng-click="splitView.toggle(); splitView.setMainPage('page2.html');">
-                    <i class="fa fa-gear fa-lg" style="color: #666"></i>
-                    &nbsp; Page 2
+                <ons-list-item>
+                    Facebook
+                    <ons-switch modifier="list-item" checked></ons-switch>
                 </ons-list-item>
-
             </ons-list>
+
+            <div class="settings-header">Others</div>
+
+            <ons-list modifier="inset" class="settings-list">
+                <ons-list-item modifier="chevron" ng-click="doSomething()">
+                    Terms of Service
+                </ons-list-item>
+
+                <ons-list-item modifier="chevron" ng-click="doSomething()">
+                    Privacy Policy
+                </ons-list-item>
+            </ons-list>
+
+            <br>
+
+            <ons-list modifier="inset" class="settings-list">
+                <ons-list-item modifier="tappable" ng-click="doSomething()">
+                    <ons-icon icon="ion-log-out" style="opacity: 0.8"></ons-icon>
+                    Sign out
+                </ons-list-item>
+            </ons-list>
+
+            <br>
 
         </ons-page>
     </ons-template>
