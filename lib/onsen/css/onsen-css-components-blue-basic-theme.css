@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(font/Roboto-Thin.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(font/Roboto-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(font/Roboto-Regular.ttf) format('truetype');
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -11,6 +30,7 @@ body {
   padding: 0;
   margin: 0;
   -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 *:not(input):not(textarea):not(select) {
   -webkit-user-select: none;
@@ -44,7 +64,7 @@ h6 {
   font-size: 18px;
 }
 .page {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -363,7 +383,7 @@ h6 {
     </div>
 */
 .navigation-bar {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -667,7 +687,7 @@ h6 {
     </div>
 */
 .bottom-bar {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -781,7 +801,7 @@ h6 {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -902,7 +922,7 @@ h6 {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -988,7 +1008,7 @@ h6 {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1110,7 +1130,7 @@ h6 {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1201,7 +1221,7 @@ h6 {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1284,7 +1304,7 @@ h6 {
     </div>
 */
 .button-bar {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1299,7 +1319,7 @@ h6 {
   border: none;
 }
 .button-bar__item {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1350,7 +1370,7 @@ h6 {
   border-bottom-right-radius: 4px;
 }
 .button-bar__button {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1501,7 +1521,7 @@ h6 {
     </div>
 */
 .tab-bar {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1516,8 +1536,8 @@ h6 {
   margin: 0;
   padding: 0;
   height: 49px;
-  background-color: #222;
-  border-top: 1px solid rgba(0,0,0,0);
+  background-color: #FFF;
+  border-top: 1px solid #FFAB40;
   width: 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -1534,7 +1554,7 @@ h6 {
   }
 }
 .tab-bar__item {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1569,7 +1589,7 @@ h6 {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1623,7 +1643,7 @@ h6 {
   height: 32px;
 }
 .tab-bar__label {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1642,17 +1662,17 @@ h6 {
   padding: 0;
 }
 .tab-bar__button {
-  color: #999;
+  color: #212121;
 }
 :checked + .tab-bar__button {
-  color: #7abfff;
+  color: #FFAB40;
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-top: none;
 }
 :checked + .tab-bar__button > .tab-bar__icon {
-  color: #7abfff;
+  color: #FFAB40;
 }
 .tab-bar__button:disabled {
   opacity: 0.3;
@@ -1837,7 +1857,7 @@ h6 {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1887,7 +1907,7 @@ h6 {
 .toolbar-button,
 .toolbar-button--outline,
 .toolbar-button--quiet {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -1982,7 +2002,7 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -2004,7 +2024,7 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -2077,7 +2097,7 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -2172,7 +2192,7 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -2396,7 +2416,7 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -2510,7 +2530,7 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -2924,7 +2944,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   vertical-align: top;
   outline: none;
   line-height: 1;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3001,7 +3021,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   vertical-align: top;
   outline: none;
   line-height: 1;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3066,7 +3086,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   vertical-align: top;
   outline: none;
   line-height: 1;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3136,7 +3156,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   vertical-align: top;
   outline: none;
   line-height: 1;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3207,7 +3227,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3260,7 +3280,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3322,7 +3342,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3402,7 +3422,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3428,7 +3448,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   color: #1f1f21;
 }
 .alert-dialog-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3467,7 +3487,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3721,7 +3741,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3934,7 +3954,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-sizing: border-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -3972,7 +3992,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
   box-sizing: border-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
