@@ -9,7 +9,7 @@
     <!-- JS dependencies (order matters!) -->
     <script src="scripts/platformOverrides.js"></script>
     <script src="lib/angular/angular.js"></script>
-    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="lib/onsen/js/onsenui.min.js"></script>
 
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
@@ -162,7 +162,29 @@
                     <div class="center">Вещание</div>
                     <div class="right"></div>
                 </ons-toolbar>
-				
+				<ul class="list">
+					<li class="list__item" style="text-align: center;">
+					  <div style="float: left"><i class="fa fa-volume-down fa-fw"></i></div>
+					  <div style="float: right"><i class="fa fa-volume-up fa-fw"></i></div>
+					  <input type="range" value="50" class="range" style="margin-top: 6px; width: 90%;">
+					</li>
+				</ul>
+				<div class="button-bar" style="width:100%;">
+				  <div class="button-bar__item">
+					<input type="radio" name="segment-a" checked>
+					<button class="button-bar__button">32kb\s (acc+)</button>
+				  </div>
+
+				  <div class="button-bar__item">
+					<input type="radio" name="segment-a">
+					<button class="button-bar__button">64kb\s (acc+)</button>
+				  </div>
+
+				  <div class="button-bar__item">
+					<input type="radio" name="segment-a">
+					<button class="button-bar__button">128kb\s (mp3)</button>
+				  </div>
+				</div>
                 <ons-list style="margin: -1px 0">
 					<div class="settings-header">Интересности</div>
                     <ons-list-item modifier="chevron" class="item" ng-repeat="i in [1,2]" ng-click="doSomething()">
