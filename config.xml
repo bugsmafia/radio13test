@@ -7,7 +7,7 @@
   <author email="bugsmafia@gmail.com" href="https://vk.com/bugsmafia">
     Сергей Осипов Bugsmafia
   </author>
-  <content src="index.html" />
+  <content src="app/index.html" />
   <!-- <content src="http://localhost/index.html" /> -->
   <preference name="xwalkVersion" value="13" />
   <plugin name="cordova-plugin-whitelist" version="1" />
